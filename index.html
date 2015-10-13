@@ -1,38 +1,41 @@
-<!-- 
-- Add captions below each thumbnail image (both top and left alignment)
-- Reduce the width of the preview when aligned right to 40%, but remain centered
-- Add another row of 5 on the bottom or right (onmousehover)
-- use at least 2 other events (onmouseover)
-- http://www.w3schools.com/jsref/dom_obj_event.asp -->
+<html><head>
+		<!-- Set the title of the page. This only shows up in the tab -->
+		<title>Unit 1 - Day 1 - Image Gallery in HTML</title>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-	<!-- Wrapper for the page -->
-	<div class="gallery-wrapper">
-		<!-- Title for the page -->
-		<h1>Unit 1 - day 1 - gallery</h1>
-		<!-- Wrapper for the thumbnails -->
-		<div class="thumbnails">
-				<img onmouseover="preview.src=img1.src" name="img1" src="images/image1.jpg" alt=""/>
-				<img onmouseover="preview.src=img2.src" name="img2" src="images/image2.jpg" alt=""/>
-				<img onmouseover="preview.src=img3.src" name="img3" src="images/image3.jpg" alt=""/>
-				<img onmouseover="preview.src=img4.src" name="img4" src="images/image4.jpg" alt=""/>
-				<img onmouseover="preview.src=img5.src" name="img5" src="images/image5.jpg" alt=""/>
+		<!-- Get our font from Google -->
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700italic" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+
+		<!-- Create our wrapper div. Everything will be inside this. -->
+		<div class="gallery">
+			<!-- Put a header at the top of the gallery wiht info about the gallery -->
+			<h2>Unit 1 - Day 1 - Image Gallery in HTML</h2>
+
+			<!-- Break tag for a new line -->
+			<br>
+
+			<!-- Wrapper for the thumnails at the top of the page-->
+			<div class="thumbnails">
+				<!-- Each individual image inside the thumnail wrapper -->
+				<!-- onmouseover is a JavaScript method that will cause the behavior in quotes when the mouse goes over the thing -->
+				<!-- preview = the name we are going to target, src is the method we are going to use on it -->
+				<!-- http://www.w3schools.com/jsref/dom_obj_event.asp -->
+				<img onmouseover="preview.src=img1.src" name="img1" src="images/image1.jpg" alt="">
+				<img onmouseover="preview.src=img2.src" name="img2" src="images/image2.jpg" alt="">
+				<img onmouseover="preview.src=img3.src" name="img3" src="images/image3.jpg" alt="">
+				<img onmouseover="preview.src=img4.src" name="img4" src="images/image4.jpg" alt="">
+				<img onmouseover="preview.src=img5.src" name="img5" src="images/image5.jpg" alt="">
+			</div><br>
+
+			<!-- The wrapper for our large image preview -->
+			<div class="preview">
+				<!-- The name of this img tag is preview. This is what we are targeting in our mouseovers -->
+				<img name="preview" src="file:///Users/robertbunch/Desktop/DigitalCrafts/Curriculum/code/unit1/photo_gallery/images/image1.jpg" alt="">
+			</div>
+
 		</div>
 
-		<div class="preview">
-			<img name="preview" src="images/image3.jpg" alt="image">
-		</div>
-
-	</div>
-</body>
-</html>
+	
+</body></html>

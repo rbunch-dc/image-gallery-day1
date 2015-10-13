@@ -1,41 +1,29 @@
-body{
-	background-color: #222;
-	/* #fff = white */
-	color: #eee;
-	margin-top: 20px;
-	font-family: 'Playfair Display', serif;
-}
+		/*	Set our body tag so that the entire page has a blackish color, all the text is #eee (greyish) 
+			Keep a margin on the top, and set the font to Playfair with a fallback of serif */
+		body {
+			background: #222;
+			color: #eee;
+			margin-top: 20px;
+			font-family: 'Playfair Display', serif;
+		}
 
-h1{
-    font-size: 35px;
-    text-align: center;
-    margin-bottom: 20px;	
-}
+		/*	set each of our thumbnails to have a grey border color on load.
+			Set the height, give it some margin and some padding as well 
+			We don't need to set the width, becuase they have dif aspect ratios */
+		.thumbnails img {
+			height: 80px;
+			border: 4px solid #555;
+			padding: 1px;
+			margin: 0 10px 10px 0;
+		}
 
-.thumbnails{
-	width: 20%;
-	float: left;
-	margin: 0 2%;
-}
+		/*	set each of our thumbnails to have a blue border color on hover.
+			Also make sure we have a "hand" when the user hovers so they know they can click it. */
+		.thumbnails img:hover {
+			border: 4px solid #00ccff;
+			cursor:pointer;
+		}
 
-.thumbnails img{
-	height: 80px;
-	border: 4px solid #555;
-	max-width: 100%;
-}
-
-.thumbnails img:hover{
-	border: 4px solid #00ccff;
-}
-
-.preview{
-	text-align: center;
-	width: 72%;
-	float: left;
-	margin: 0 2%;
-}
-
-.preview img{
-	width: 100%;
-	max-width: 100%;
-}
+		.gallery, .preview{
+			text-align: center;
+		}
